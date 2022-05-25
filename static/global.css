@@ -1,0 +1,86 @@
+:root {
+  --primary000: #0B132B;
+  --primary100: #1C2541;
+  --primary200: #3A506B;
+  --primary300: #AFCAEA;
+  --primary400: #D1DFF0;
+
+  --secondary200: #205F57;
+  --secondary300: #0B8879;
+  --secondary400: #33C67F;
+  --secondary500: #56E39F;
+  --secondary600: #82FAC0;
+  --secondary700: #DFFFEF;
+
+  --tertiary500: #D36135;
+
+  --font_a: 'Noto Sans', sans-serif;
+  --font_b: 'Staatliches', sans-serif;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Defaults. */
+
+body {
+  margin: 0;
+
+  background-color: var(--primary000);
+  font-family: var(--font_a);
+  color: var(--primary300);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font_b);
+  color: var(--primary400);
+}
+
+a {
+  color: var(--secondary500);
+}
+
+a:visited {
+  color: var(--secondary300);
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* This class is reused. */
+
+.buttonList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.buttonList  > *:not(:last-child) {
+  margin-right: .5rem;
+}
+
+.buttonList > li {
+  list-style-type: none;
+  margin-bottom: .5rem;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Animations. */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; } 
+}
+
+@keyframes slideUp {
+  from { transform: translateY(1rem); }
+  to { transform: translateY(0rem); } 
+}
+
+@keyframes rotate {
+  from { transform: rotate3d(1, 0, 0, 180deg) }
+  to { transform: rotate3d(1, 0, 0, 0deg) }
+}
+
+/* ------------------------------------------------------------------------------------ */
